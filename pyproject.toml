@@ -1,0 +1,20 @@
+[project]
+name = "meta-ads-automation"
+version = "0.1.0"
+description = "A safe command line layer over the Meta Marketing API and Instagram Graph API"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
